@@ -1,0 +1,169 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  width: 100%;
+  position: relative;
+  background: #000000;
+  color: #fff;
+  font-family: "Arial";
+}
+
+/* navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #000000;
+  padding: 0 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9;
+}
+
+.brand {
+  color: orange;
+  text-decoration: none;
+  font-size: 40px;
+  margin: 0; /* Reset margin for h1 */
+}
+
+.link-group {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-right: -40px;
+}
+
+.link a {
+  color: #fff;
+  opacity: 0.5;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  margin: 0 20px;
+  line-height: 60px;
+  transition: .5s;
+  font-size: 20px;
+  position: relative;
+}
+
+.link a:hover {
+  opacity: 1;
+}
+
+.link a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Center the line under the link */
+  width: 0; /* Initially set the width to 0 */
+  height: 2px;
+  background-color: orange;
+  transition: width 0.3s ease, transform 0.3s ease; /* Add transition for transform */
+  transform-origin: center; /* Set the transform origin to the center */
+}
+
+.link a:hover::after {
+  width: 50%; /* Expand the width on hover */
+  transform: translateX(-49%) scaleX(1); /* Contract the line from both ends */
+}
+
+/* home section */
+.home-section {
+  width: 100%;
+  height: 100vh;
+  padding: 0 150px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  margin-top: -70px; /* Adjust the margin-top property to move it upwards */
+  margin-left: 50px;
+  opacity: 1;
+  transition: 1s;
+}
+
+.hero-heading {
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 1;
+}
+
+.hero-heading h1 {
+  font-size: 70px;
+  text-transform: capitalize;
+  font-weight: 100;
+  margin: 0 0 1px;
+  color: #828080;
+}
+
+.hero-heading h2 {
+  font-size: 96px;
+  font-weight: 500;
+  margin: -20px 0 0;
+  color: transparent; /* Make the text transparent */
+  text-shadow: 0 0 1px rgb(255, 255, 255); /* Add a white glow effect */
+  transition: color 0.3s; /* Add a smooth color transition effect */
+}
+
+/* Add hover effect to change the text color to white */
+.hero-heading:hover h2 {
+  color: orange;
+}
+
+.hero-heading h3 {
+  font-size: 80px;
+  font-weight: 500;
+  margin: -50px 0 0;
+  position: relative;
+}
+
+/* Add a new rule for the white line */
+.hero-heading h3::after {
+  content: '';
+  display: block;
+  width: 30%;
+  height: 1px;
+  background-color: orange;
+  position: absolute;
+  bottom: -30px; /* Adjust as needed */
+}
+
+/* Image styling */
+.home-img {
+  position: fixed; /* Change to fixed positioning */
+  top: 30px;
+  right: 10%;
+  height: 88%;
+  width: 43%;
+  object-fit: cover;
+  opacity: 1;
+  transition: 1s; /* You might want to add a transition for smooth effects */
+}
+
+/* Add styling for the introduction text container */
+.introduction-container {
+  position: absolute;
+  bottom: 170px;
+  margin-left: 0px;
+  z-index: 2;
+}
+
+.introduction {
+  color: #bababa;
+  font-size: 15px;
+  margin-top: 10px;
+  font-family: Arial;
+  z-index: 2;
+}
