@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <link href="/stylesheets/styles.css" rel="stylesheet">
+    <link href="/stylesheets/linkedin.css" rel="stylesheet">
+
     <title>Portfolio</title>
 </head>
 <body>
@@ -14,21 +16,40 @@
 <%- include('partials/navbar') %>
 
 <!-- home section -->
-<section class="home-section active">
-  <div class="hero-heading">
-    <h1>Hi! I'm</h1>
-    <h2>BACKEND</h2>
-    <br>
-    <h3>DEVELOPER</h3>
-    <!-- Create a container for the introduction text -->
-    <div class="introduction-container">
-      <p class="introduction">Greetings! I'm a passionate and detail-oriented backend developer.<br> 
-        I find joy in transforming innovative ideas into robust and scalable solutions.<br> 
-        My coding journey is not just a career but a continuous exploration of possibilities.</p>
-    </div>
-  </div>
-  <img src="images/imgme.jpg" class="home-img" alt="">
-</section>
+<div class="heading">
+  <h1 id="one">Hi! I'm</h1>
+  <h2 id="two">BACKEND</h2>
+  <h3 id="three">DEVELOPER</h3>
+</div>
 
+<!-- Introduction text -->
+<div class="introduction">
+  <p>Greetings! I'm a passionate and detail-oriented backend developer.<br> 
+    I find joy in transforming innovative ideas into robust and scalable solutions.<br> 
+    My coding journey is not just a career but a continuous exploration of possibilities.</p>
+</div>
+
+<div class="me-img">
+  <img src="images/imgme.jpg" class="home-img" alt="">
+</div>
+
+<button onclick="redirectToAbout()" class="aboutMeBtn">KNOW MORE</button>
+<script>
+  function redirectToAbout() {
+      window.location.href = 'http://localhost:3000/about';
+  }
+</script>
+
+<!-- LinkedIn icon container -->
+<div class="linkedin-container">
+  <!-- LinkedIn icon SVG code -->
+  <div class="linkedin-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+      <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+    </svg>
+  </div>
+</div>
+
+<script src="/javascripts/linkedIn.js"></script>
 </body>
 </html>

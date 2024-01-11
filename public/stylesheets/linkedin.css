@@ -1,0 +1,12 @@
+.linkedin-container {
+  position: fixed;
+  bottom: 150px; /* Adjust the distance from the bottom */
+  left: 200px; /* Adjust the distance from the right */
+  z-index: 1; /* Ensure the icon appears above other content */
+  cursor: pointer;
+  padding: 0px;
+}
+
+.linkedin-icon:hover {
+    background-color: rgb(47, 167, 246); /* Change to your desired hover color (blue in this example) */
+  }

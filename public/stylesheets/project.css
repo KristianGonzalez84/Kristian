@@ -1,0 +1,18 @@
+.projects {
+    display: flex;
+    font-family: Arial;
+    color: #bababa;
+    margin-top: 15%;
+    left: 10%;
+    position: relative;
+}
+
+.projects h3::after {
+    content: '';
+    display: block;
+    width: 12%; /* Set width to 100% to cover the entire width of the parent */
+    height: 2px;
+    background: linear-gradient(to right, orange, black);
+    position: absolute;
+    bottom: 20%; /* Adjust as needed */
+}
