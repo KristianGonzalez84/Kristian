@@ -189,13 +189,15 @@ body {
   color: white;
   border: 1px solid rgb(253, 203, 111);
   padding: 5px 10px;
-  font-size: 14px; /* Adjust the font size as needed */
+  font-size: 12px; /* Adjust the font size as needed */
   font-weight: 200;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
-  margin-top: 10px;
+  margin-top: 0px;
   border-radius: 20px;
   box-sizing: border-box; /* Ensures padding and border don't affect overall size */
+  min-width: 100px; /* Sets a minimum width to prevent shrinking */
+  text-align: center; /* Centers the text inside the button */
 }
 
 .aboutMeBtn:hover {

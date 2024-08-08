@@ -1,6 +1,6 @@
 .linkedin-container {
   position: relative;
-  top: 60px; /* Adjust the distance from the bottom for smaller screens */
+  top: 20px; /* Adjust the distance from the bottom for smaller screens */
   left: 200px; /* Adjust the distance from the left for larger screens */
   z-index: 14; /* Ensure the icon appears above other content */
   cursor: pointer;
